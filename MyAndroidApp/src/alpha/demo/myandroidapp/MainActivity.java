@@ -7,10 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
 	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+	public final static String SEARCH_STRING = "You chick search at action bar";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,9 @@ public class MainActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+		// replace return true;
+		return super.onCreateOptionsMenu(menu);
+		// return true;
 	}
 
 	@Override
@@ -33,6 +37,8 @@ public class MainActivity extends ActionBarActivity {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
+		}else if (id == R.id.action_search) {
+			Toast.makeText(this, SEARCH_STRING, Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
