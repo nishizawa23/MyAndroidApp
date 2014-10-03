@@ -1,6 +1,7 @@
 package alpha.demo.myandroidapp;
 
 import android.support.v7.app.ActionBarActivity;
+import android.app.Application.ActivityLifecycleCallbacks;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -37,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
-		}else if (id == R.id.action_search) {
+		} else if (id == R.id.action_search) {
 			Toast.makeText(this, SEARCH_STRING, Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);
@@ -52,5 +53,10 @@ public class MainActivity extends ActionBarActivity {
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
 
+	}
+
+	public void activityLife(View view) {
+		Intent intent = new Intent(this, ActivityLife.class);
+		startActivity(intent);
 	}
 }
