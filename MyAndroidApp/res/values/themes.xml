@@ -16,9 +16,9 @@
         <!-- Support library compatibility -->
         <item name="background">@color/goldenrod</item>
     </style>
-    
-     <style name="CustomActionBarThemeTwo"
-           parent="@style/Theme.AppCompat.Light">
+
+    <style name="CustomActionBarThemeTwo" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowActionBarOverlay">true</item>
         <item name="android:actionBarStyle">@style/MyActionBarTwo</item>
         <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
         <item name="android:actionMenuTextColor">@color/goldenrod</item>
@@ -27,11 +27,11 @@
         <item name="actionBarStyle">@style/MyActionBarTwo</item>
         <item name="actionBarTabTextStyle">@style/MyActionBarTabText</item>
         <item name="actionMenuTextColor">@color/goldenrod</item>
+        <item name="windowActionBarOverlay">true</item>
     </style>
 
     <!-- ActionBar styles -->
-    <style name="MyActionBarTwo"
-           parent="@style/Widget.AppCompat.ActionBar">
+    <style name="MyActionBarTwo" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
 
         <!-- Support library compatibility -->
@@ -39,15 +39,13 @@
     </style>
 
     <!-- ActionBar title text -->
-    <style name="MyActionBarTitleText"
-           parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/goldenrod</item>
         <!-- The textColor property is backward compatible with the Support Library -->
     </style>
 
     <!-- ActionBar tabs text -->
-    <style name="MyActionBarTabText"
-           parent="@style/Widget.AppCompat.ActionBar.TabText">
+    <style name="MyActionBarTabText" parent="@style/Widget.AppCompat.ActionBar.TabText">
         <item name="android:textColor">@color/darkmagenta</item>
         <!-- The textColor property is backward compatible with the Support Library -->
     </style>

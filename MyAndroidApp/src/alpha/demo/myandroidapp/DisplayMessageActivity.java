@@ -1,9 +1,9 @@
 package alpha.demo.myandroidapp;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +25,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		TextView textView = new TextView(this);
 		textView.setTextSize(40);
 		textView.setText(message);
+		textView.setBackgroundColor(getResources().getColor(
+				R.color.palevioletred));
 
 		// Set the text view as the activity layout
 		setContentView(textView);
@@ -33,10 +35,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		// setContentView(R.layout.activity_display_message);
 
 		// Delete origin source by huangxinghua for demo start activity
-		/*if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}*/
+		/*
+		 * if (savedInstanceState == null) {
+		 * getSupportFragmentManager().beginTransaction() .add(R.id.container,
+		 * new PlaceholderFragment()).commit(); }
+		 */
 	}
 
 	@Override
